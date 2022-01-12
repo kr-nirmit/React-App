@@ -2,10 +2,11 @@ import axios from 'axios'
 import React,{useState, useEffect} from 'react'
 
 function DataFetching() {
-    const [posts, setposts] = useState([])
+    const [posts, setposts] = useState({})
+    const [id, setid] = useState(1)
 
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then(res => {
             console.log(res);
             setposts(res.data)
@@ -17,12 +18,14 @@ function DataFetching() {
         return () => {
             
         }
-    }, [])
+    }, [id])
 
     return (
         <div>
             <h1>List of Posts <br />GET API Call</h1>
-                <table border='1'>
+            <input type='text' value={id} onChange={e => setid(e.target.value)}></input>
+            <div>{posts.title}</div>
+                {/* <table border='1'>
                     <tr>
                         <td>ID</td>
                         <td>Title Name</td>
@@ -37,7 +40,7 @@ function DataFetching() {
                         </tr>
                         )
                     }
-                </table>
+                </table> */}
         </div>
     )
 }
