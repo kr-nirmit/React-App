@@ -10,7 +10,7 @@ function UseStateObject() {
 
     useEffect(() => {
         console.log('Use Effect render');
-    },[count])
+    },[])
 
     return (
         <div>
