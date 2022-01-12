@@ -5,6 +5,7 @@ import PostForm from './components/PostForm';
 import HookCounter from './components/HookCounter';
 import UseStateObject from './components/UseStateObject';
 import IntervalCounter from './components/IntervalCounter';
+import DataFetching from './components/DataFetching';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <PostForm /> */}
       {/* <HookCounter /> */}
       {/* <UseStateObject /> */}
-      <IntervalCounter />
+      {/* <IntervalCounter /> */}
+      <DataFetching />
     </div>
   );
 }
