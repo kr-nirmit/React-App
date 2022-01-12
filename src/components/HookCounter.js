@@ -1,9 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 
 function HookCounter() {
     const [count, setCount] = useState(0)
     const initialCount = 0
     const [count1, setCount1] = useState(initialCount)
+
+    useEffect(() => {
+        document.title = `You Clicked ${count} times`
+    })
+
     return (
         <div>
             <p>{count}</p>

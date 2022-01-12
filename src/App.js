@@ -3,6 +3,7 @@ import './App.css';
 import PostList from './components/PostList';
 import PostForm from './components/PostForm';
 import HookCounter from './components/HookCounter';
+import UseStateObject from './components/UseStateObject';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       {/* <PostList /> */}
       {/* <PostForm /> */}
       <HookCounter />
+      {/* <UseStateObject /> */}
     </div>
   );
 }
