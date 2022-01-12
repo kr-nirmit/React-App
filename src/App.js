@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       {/* <PostList /> */}
       {/* <PostForm /> */}
-      <HookCounter />
-      {/* <UseStateObject /> */}
+      {/* <HookCounter /> */}
+      <UseStateObject />
     </div>
   );
 }
